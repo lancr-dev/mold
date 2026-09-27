@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore Claymorphism with Mold by Lance: soft shapes, tactile details, and expressive web design for brands with personality."
+    />
+    <meta name="theme-color" content="#f7f0e8" />
+    <title>Mold by Lance — Claymorphism for your brand</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Visual thesis: a warm clay studio with peach surfaces, berry actions,
+         dark ink, and a consistent upper-left light source. CSS comes next. -->
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Mold by Lance, home">
+          <span class="brand-mark" aria-hidden="true">m</span>
+          <span class="brand-name"
+            >mold<span class="brand-credit">by Lance</span></span
+          >
+        </a>
+        <!-- Navigation stays visible without JavaScript. The script will enable
+             this disclosure control only when the mobile menu is ready. -->
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          data-menu-toggle
+          hidden
+        >
+          <span>Menu</span
+          ><span class="menu-toggle-icon" aria-hidden="true"></span>
+        </button>
+        <nav
+          class="primary-navigation"
+          id="primary-navigation"
+          aria-label="Main navigation"
+          data-navigation
+        >
+          <ul class="navigation-list">
+            <li><a class="navigation-link" href="#home">Home</a></li>
+            <li><a class="navigation-link" href="#about">About</a></li>
+            <li><a class="navigation-link" href="#explore">Explore</a></li>
+            <li>
+              <a class="navigation-link" href="#applications">Brand ideas</a>
+            </li>
+            <li>
+              <a class="navigation-link navigation-cta" href="#project"
+                >Shape your project <span aria-hidden="true">↗</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <section class="hero section" id="home" aria-labelledby="home-title">
+        <div class="container hero-layout">
+          <div class="hero-content">
+            <p class="eyebrow">A web design showcase / Claymorphism</p>
+            <h1 id="home-title">Give your brand<br />a softer side.</h1>
+            <p class="hero-description">
+              Rounded forms. Sculpted surfaces. Buttons that look ready to
+              press. Discover a web design style that makes your brand feel
+              warm, expressive, and approachable.
+            </p>
+            <a class="button button-primary" href="#explore"
+              >Explore the clay effect <span aria-hidden="true">↘</span></a
+            >
+            <p class="hero-credit">
+              Designed &amp; developed by Lance
+              <span aria-hidden="true">/</span> Freelance web developer
+            </p>
+          </div>
+          <figure class="hero-material" aria-labelledby="hero-material-caption">
+            <div class="material-stage" aria-hidden="true">
+              <div class="material-tile material-tile-back"></div>
+              <div class="material-tile material-tile-front">
+                <span class="material-monogram">m</span>
+                <span class="material-wordmark">made to feel different.</span>
+              </div>
+              <span class="material-stamp">soft by design</span>
+              <span class="material-annotation material-annotation-light"
+                >01 / Soft highlights</span
+              >
+              <span class="material-annotation material-annotation-depth"
+                >02 / Sculpted depth</span
+              >
+            </div>
+            <figcaption id="hero-material-caption">
+              A study in soft surfaces: rounded edges, an opaque body, and
+              gentle shadows.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="about section" id="about" aria-labelledby="about-title">
+        <div class="container about-layout">
+          <div class="section-heading">
+            <p class="eyebrow">01 / Meet the material</p>
+            <h2 id="about-title">Digital design.<br />A handmade feeling.</h2>
+          </div>
+          <div class="about-content">
+            <p class="section-intro">
+              Claymorphism gives interface elements the appearance of soft,
+              molded objects. It brings a sense of volume to a flat screen
+              without needing real 3D rendering.
+            </p>
+            <p>
+              The effect comes from solid color, generous curves, soft outer
+              shadows, and subtle inner shading. Used selectively, those details
+              draw attention to the things visitors can do.
+            </p>
+            <dl class="material-principles">
+              <div class="material-principle">
+                <dt>
+                  <span class="principle-number" aria-hidden="true">01</span> A
+                  solid surface
+                </dt>
+                <dd>
+                  Opaque colors give each object a clear silhouette and keep the
+                  content readable.
+                </dd>
+              </div>
+              <div class="material-principle">
+                <dt>
+                  <span class="principle-number" aria-hidden="true">02</span>
+                  Light with direction
+                </dt>
+                <dd>
+                  A gentle highlight and a deeper shaded edge make the surface
+                  feel rounded.
+                </dd>
+              </div>
+              <div class="material-principle">
+                <dt>
+                  <span class="principle-number" aria-hidden="true">03</span>
+                  Depth with a purpose
+                </dt>
+                <dd>
+                  Raised actions invite interaction while quieter text areas
+                  leave room to read.
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="explore section"
+        id="explore"
+        aria-labelledby="explore-title"
+      >
+        <div class="container">
+          <div class="section-heading explore-heading">
+            <div>
+              <p class="eyebrow">02 / The material lab</p>
+              <h2 id="explore-title">
+                Same message.<br />A different feeling.
+              </h2>
+            </div>
+            <p>
+              Compare a flat surface with its clay counterpart. The content
+              stays the same; the shape, light, and depth change its character.
+            </p>
+          </div>
+          <div class="explorer" data-explorer data-palette="peach">
+            <div class="comparison-grid">
+              <figure class="comparison-item">
+                <figcaption>
+                  <span class="sample-number">A</span> Flat design
+                  <span class="sample-description">Clean &amp; direct</span>
+                </figcaption>
+                <div class="sample-stage sample-stage-flat">
+                  <div class="sample-card sample-card-flat">
+                    <span class="sample-emblem" aria-hidden="true">m</span>
+                    <p class="sample-label">A little brand personality</p>
+                    <h3>Make room for ideas.</h3>
+                    <p>A welcoming space for your next big thing.</p>
+                    <span class="sample-action"
+                      >Your next chapter <span aria-hidden="true">↗</span></span
+                    >
+                  </div>
+                </div>
+              </figure>
+              <figure class="comparison-item">
+                <figcaption>
+                  <span class="sample-number">B</span> Claymorphism
+                  <span class="sample-description">Soft &amp; dimensional</span>
+                </figcaption>
+                <div class="sample-stage sample-stage-clay">
+                  <div class="sample-card sample-card-clay" data-clay-sample>
+                    <span class="sample-emblem" aria-hidden="true">m</span>
+                    <p class="sample-label">A little brand personality</p>
+                    <h3>Make room for ideas.</h3>
+                    <p>A welcoming space for your next big thing.</p>
+                    <span class="sample-action"
+                      >Your next chapter <span aria-hidden="true">↗</span></span
+                    >
+                  </div>
+                </div>
+              </figure>
+            </div>
+            <p class="demo-caption">
+              Visual samples only. The button shapes above illustrate each
+              treatment.
+            </p>
+
+            <!-- JavaScript removes disabled only after wiring the controls.
+                 Range values map to bounded CSS custom properties. -->
+            <fieldset
+              class="explorer-controls"
+              data-explorer-controls
+              disabled
+              aria-describedby="explorer-help"
+            >
+              <legend>Make it feel like your brand</legend>
+              <fieldset class="palette-picker">
+                <legend>Surface color</legend>
+                <div class="palette-options">
+                  <label class="palette-option"
+                    ><input
+                      type="radio"
+                      name="palette"
+                      value="peach"
+                      checked
+                    /><span
+                      class="palette-swatch palette-swatch-peach"
+                      aria-hidden="true"
+                    ></span
+                    ><span>Peach</span></label
+                  >
+                  <label class="palette-option"
+                    ><input type="radio" name="palette" value="sage" /><span
+                      class="palette-swatch palette-swatch-sage"
+                      aria-hidden="true"
+                    ></span
+                    ><span>Sage</span></label
+                  >
+                  <label class="palette-option"
+                    ><input type="radio" name="palette" value="lilac" /><span
+                      class="palette-swatch palette-swatch-lilac"
+                      aria-hidden="true"
+                    ></span
+                    ><span>Lilac</span></label
+                  >
+                </div>
+              </fieldset>
+              <div class="range-control">
+                <label for="clay-depth"
+                  >Depth
+                  <output id="depth-value" for="clay-depth"
+                    >3 / 5</output
+                  ></label
+                >
+                <input
+                  id="clay-depth"
+                  name="depth"
+                  type="range"
+                  min="1"
+                  max="5"
+                  step="1"
+                  value="3"
+                  data-depth
+                />
+                <div class="range-scale" aria-hidden="true">
+                  <span>Subtle</span><span>Sculpted</span>
+                </div>
+              </div>
+              <div class="range-control">
+                <label for="clay-roundness"
+                  >Corner softness
+                  <output id="roundness-value" for="clay-roundness"
+                    >28 px</output
+                  ></label
+                >
+                <input
+                  id="clay-roundness"
+                  name="roundness"
+                  type="range"
+                  min="12"
+                  max="44"
+                  step="4"
+                  value="28"
+                  data-roundness
+                />
+                <div class="range-scale" aria-hidden="true">
+                  <span>Structured</span><span>Rounded</span>
+                </div>
+              </div>
+              <button
+                class="button button-secondary"
+                type="button"
+                data-reset-explorer
+              >
+                Reset material
+              </button>
+            </fieldset>
+            <p class="field-help" id="explorer-help" data-explorer-help>
+              The live controls need JavaScript. You can still compare both
+              samples above.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="applications section"
+        id="applications"
+        aria-labelledby="applications-title"
+      >
+        <div class="container">
+          <div class="section-heading applications-heading">
+            <p class="eyebrow">03 / Imagine your brand here</p>
+            <h2 id="applications-title">
+              A material with personality.<br />A layout with a job to do.
+            </h2>
+            <p>
+              These fictional concepts show where a soft visual language could
+              fit. Each keeps the message and main action easy to find.
+            </p>
+          </div>
+          <div class="brand-concepts">
+            <article class="brand-concept brand-concept-wellness">
+              <div
+                class="concept-preview concept-preview-wellness"
+                aria-hidden="true"
+              >
+                <span class="concept-wordmark">pause.</span>
+                <div class="concept-breath"><span></span></div>
+                <p>A little space<br />to slow down.</p>
+                <span class="concept-action">Find your moment ↗</span>
+              </div>
+              <div class="concept-content">
+                <p class="concept-category">Wellness &amp; lifestyle</p>
+                <h3>Make the first impression feel calm.</h3>
+                <p>
+                  Muted sage surfaces and generous spacing can give a wellness
+                  brand a gentle introduction, with a clear path to its
+                  services.
+                </p>
+                <a
+                  class="text-link"
+                  href="#project"
+                  data-project-interest="wellness"
+                  >Plan a wellness website <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="brand-concept brand-concept-learning">
+              <div
+                class="concept-preview concept-preview-learning"
+                aria-hidden="true"
+              >
+                <span class="concept-wordmark">little steps</span>
+                <div class="concept-blocks">
+                  <span>A</span><span>B</span><span>C</span>
+                </div>
+                <p>Big ideas.<br />Small beginnings.</p>
+                <span class="concept-action">Meet the lessons ↗</span>
+              </div>
+              <div class="concept-content">
+                <p class="concept-category">
+                  Education &amp; creative services
+                </p>
+                <h3>Give new ideas an approachable home.</h3>
+                <p>
+                  Rounded learning blocks and tactile controls can support a
+                  friendly identity while lessons and information stay
+                  organized.
+                </p>
+                <a
+                  class="text-link"
+                  href="#project"
+                  data-project-interest="education"
+                  >Plan a learning website <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="brand-concept brand-concept-studio">
+              <div
+                class="concept-preview concept-preview-studio"
+                aria-hidden="true"
+              >
+                <span class="concept-wordmark">form &amp; field</span>
+                <div class="concept-vessel">
+                  <span class="concept-vessel-rim"></span>
+                </div>
+                <p>Objects with<br />a softer edge.</p>
+                <span class="concept-action">View the collection ↗</span>
+              </div>
+              <div class="concept-content">
+                <p class="concept-category">Independent brands &amp; makers</p>
+                <h3>Let the craft shape the experience.</h3>
+                <p>
+                  A warm, sculpted presentation can echo handmade products and
+                  give a small collection room to tell its story.
+                </p>
+                <a
+                  class="text-link"
+                  href="#project"
+                  data-project-interest="brand"
+                  >Plan a brand website <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+          </div>
+          <p class="concept-note">
+            Concept studies, not client projects or testimonials.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="approach section"
+        id="approach"
+        aria-labelledby="approach-title"
+      >
+        <div class="container approach-layout">
+          <div class="section-heading">
+            <p class="eyebrow">04 / Behind the softness</p>
+            <h2 id="approach-title">
+              The style is playful.<br />The thinking is practical.
+            </h2>
+            <p>
+              A distinctive surface is only one part of a useful website. I
+              shape the design around what your visitors need to understand and
+              do.
+            </p>
+          </div>
+          <ol class="approach-list">
+            <li>
+              <h3>Start with your brand</h3>
+              <p>
+                Define your audience, content, and main action before choosing
+                colors or adding depth.
+              </p>
+            </li>
+            <li>
+              <h3>Shape the important moments</h3>
+              <p>
+                Use clay for key actions and featured content. Give longer text
+                and detailed information a quieter treatment.
+              </p>
+            </li>
+            <li>
+              <h3>Adapt to the screen</h3>
+              <p>
+                Reflow the layout for smaller screens, simplify decorative
+                layers, and leave comfortable space for touch controls.
+              </p>
+            </li>
+            <li>
+              <h3>Refine the experience</h3>
+              <p>
+                Check readability, keyboard access, focus states, reduced
+                motion, and loading behavior before launch.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section
+        class="questions section"
+        id="questions"
+        aria-labelledby="questions-title"
+      >
+        <div class="container questions-layout">
+          <div class="section-heading">
+            <p class="eyebrow">05 / A few useful answers</p>
+            <h2 id="questions-title">Is clay right<br />for your website?</h2>
+          </div>
+          <div class="question-list">
+            <details class="question">
+              <summary>Does everything have to look soft and rounded?</summary>
+              <div class="question-answer">
+                <p>
+                  No. A clay button, a featured panel, or one sculpted
+                  illustration may be enough. The rest of the page can stay
+                  simple, with conventional navigation and clear typography.
+                </p>
+              </div>
+            </details>
+            <details class="question">
+              <summary>Can the design feel professional?</summary>
+              <div class="question-answer">
+                <p>
+                  Yes. Restrained colors, consistent lighting, and disciplined
+                  spacing can keep it composed. The right amount of softness
+                  depends on your audience and the tone your brand needs.
+                </p>
+              </div>
+            </details>
+            <details class="question">
+              <summary>How does it work on mobile?</summary>
+              <div class="question-answer">
+                <p>
+                  The layout should reorganize around the content. Decorative
+                  overlaps can be removed, shadows reduced, and controls kept
+                  large enough to use comfortably.
+                </p>
+              </div>
+            </details>
+            <details class="question">
+              <summary>Does Claymorphism need heavy 3D libraries?</summary>
+              <div class="question-answer">
+                <p>
+                  No. Many clay effects can be built with standard CSS
+                  backgrounds, borders, and shadows. Complex illustrations may
+                  need assets, but the interface itself can stay lightweight.
+                </p>
+              </div>
+            </details>
+            <details class="question">
+              <summary>When would a simpler style work better?</summary>
+              <div class="question-answer">
+                <p>
+                  Dense dashboards, long forms, and information-heavy pages
+                  often benefit from flatter surfaces. Clay can still highlight
+                  an important action without adding visual weight to every
+                  element.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="project section"
+        id="project"
+        aria-labelledby="project-title"
+      >
+        <div class="container project-layout">
+          <div class="project-content">
+            <p class="eyebrow">06 / Your brand, shaped differently</p>
+            <h2 id="project-title">Picture your next<br />website in clay.</h2>
+            <p>
+              I'm Lance, a freelance web developer. If this direction feels like
+              your brand, start with a short brief about the website you have in
+              mind.
+            </p>
+            <p>
+              Use the outline beside this section to gather your ideas for our
+              project conversation.
+            </p>
+            <a class="text-link" href="#explore"
+              >Revisit the material lab <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <!-- No contact endpoint is assumed. JavaScript will create a local,
+               copyable brief; it must never claim to send an inquiry. -->
+          <div
+            class="project-form"
+            id="project-form"
+            role="group"
+            aria-labelledby="brief-title"
+            aria-describedby="brief-help"
+          >
+            <h3 id="brief-title">Your project outline</h3>
+            <p class="field-help" id="brief-help">
+              This prepares text for you to copy. It does not send a message or
+              save your details.
+            </p>
+            <div class="form-field">
+              <label for="brand-name"
+                >Brand or project name
+                <span class="field-optional">(optional)</span></label
+              >
+              <input
+                id="brand-name"
+                name="brandName"
+                type="text"
+                maxlength="100"
+                autocomplete="organization"
+                placeholder="Your brand name"
+              />
+            </div>
+            <div class="form-field">
+              <label for="project-type">What are you planning?</label>
+              <select id="project-type" name="projectType">
+                <option value="brand">Brand or business website</option>
+                <option value="wellness">Wellness or lifestyle website</option>
+                <option value="education">
+                  Education or creative service website
+                </option>
+                <option value="portfolio">Personal portfolio</option>
+                <option value="other">Another idea</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="project-goal"
+                >What should visitors be able to do?</label
+              >
+              <textarea
+                id="project-goal"
+                name="projectGoal"
+                rows="4"
+                maxlength="1000"
+                placeholder="For example: discover my services, view my work, and find out how to inquire."
+                aria-describedby="goal-help"
+              ></textarea>
+              <p class="field-help" id="goal-help">
+                A sentence or two is enough. Avoid including sensitive
+                information.
+              </p>
+            </div>
+            <button
+              class="button button-primary"
+              type="button"
+              data-create-brief
+              disabled
+              aria-describedby="brief-availability"
+            >
+              Prepare my brief <span aria-hidden="true">↗</span>
+            </button>
+            <p class="field-help" id="brief-availability" data-brief-help>
+              The brief builder needs JavaScript. You can still use these
+              questions to outline your project.
+            </p>
+            <div class="brief-result" data-brief-result hidden>
+              <label for="project-brief">Your prepared brief</label>
+              <textarea id="project-brief" rows="9" readonly></textarea>
+              <button
+                class="button button-secondary"
+                type="button"
+                data-copy-brief
+              >
+                Copy brief
+              </button>
+              <p class="field-help">
+                Share this text with Lance through your usual contact channel.
+              </p>
+            </div>
+            <p
+              class="form-status"
+              role="status"
+              aria-atomic="true"
+              data-brief-status
+            ></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a
+          class="brand footer-brand"
+          href="#home"
+          aria-label="Mold by Lance, back to home"
+          ><span class="brand-mark" aria-hidden="true">m</span
+          ><span class="brand-name"
+            >mold<span class="brand-credit">by Lance</span></span
+          ></a
+        >
+        <p>
+          A Claymorphism showcase.<br />Designed to help you imagine your next
+          website.
+        </p>
+        <a class="text-link" href="#home"
+          >Back to top <span aria-hidden="true">↑</span></a
+        >
+        <small class="footer-copyright"
+          >&copy; <span data-year>2026</span> Lance. Built with HTML, CSS &amp;
+          JavaScript.</small
+        >
+      </div>
+    </footer>
+  </body>
+</html>
