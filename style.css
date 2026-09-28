@@ -1,21 +1,30 @@
 :root {
-  color-scheme: light;
-  --color-canvas: #f7f0e8;
-  --color-paper: #fffaf5;
-  --color-surface: #efc0aa;
-  --color-surface-soft: #f2dfd2;
-  --color-ink: #342629;
-  --color-muted: #695852;
-  --color-accent: #813747;
-  --color-accent-hover: #6c2a39;
-  --color-accent-soft: #efdae0;
-  --color-sage: #c7d5bb;
-  --color-lilac: #d6c8e5;
-  --color-line: #d8c9bd;
-  --color-control-border: #8d766c;
-  --color-focus: #245bc0;
-  --color-success: #245e41;
-  --color-error: #a12535;
+  color-scheme: dark;
+  --color-canvas: #191619;
+  --color-paper: #272226;
+  --color-surface: #654338;
+  --color-surface-soft: #241e22;
+  --color-ink: #f6eae2;
+  --color-muted: #c6b6ad;
+  --color-accent: #efa58e;
+  --color-accent-hover: #ffc0aa;
+  --color-accent-soft: #3b292d;
+  --color-on-accent: #281916;
+  --color-sage: #394a3d;
+  --color-lilac: #51425f;
+  --color-line: #51434a;
+  --color-control-border: #9b858b;
+  --color-focus: #9dc7ff;
+  --color-success: #a6d6ae;
+  --color-error: #ffacb5;
+  --color-stage: #211b1f;
+  --color-raised: #332b30;
+  --color-peach-highlight: #91624f;
+  --color-peach-shade: #402a25;
+  --color-sage-highlight: #61785a;
+  --color-sage-shade: #243027;
+  --color-lilac-highlight: #7a628a;
+  --color-lilac-shade: #32283e;
   --font-body: 'Trebuchet MS', 'Segoe UI', Arial, sans-serif;
   --font-display:
     'Arial Rounded MT Bold', 'Trebuchet MS', 'Segoe UI', sans-serif;
@@ -33,16 +42,16 @@
   --radius-lg: 2rem;
   --radius-xl: 3rem;
   --shadow-clay:
-    0.6rem 0.8rem 1.4rem rgb(94 56 44 / 16%),
-    inset 0.3rem 0.3rem 0.6rem rgb(255 255 255 / 52%),
-    inset -0.35rem -0.4rem 0.7rem rgb(129 68 47 / 17%);
+    0.6rem 0.8rem 1.4rem rgb(0 0 0 / 35%),
+    inset 0.3rem 0.3rem 0.6rem rgb(255 224 208 / 10%),
+    inset -0.35rem -0.4rem 0.7rem rgb(0 0 0 / 28%);
   --shadow-control:
-    0.2rem 0.3rem 0.5rem rgb(90 42 49 / 18%),
+    0.2rem 0.3rem 0.5rem rgb(0 0 0 / 35%),
     inset 0.15rem 0.15rem 0.3rem rgb(255 255 255 / 20%),
-    inset -0.15rem -0.2rem 0.3rem rgb(42 14 24 / 18%);
+    inset -0.15rem -0.2rem 0.3rem rgb(66 27 22 / 25%);
   --shadow-pressed:
-    0.1rem 0.15rem 0.25rem rgb(90 42 49 / 12%),
-    inset 0.15rem 0.2rem 0.35rem rgb(42 14 24 / 22%);
+    0.1rem 0.15rem 0.25rem rgb(0 0 0 / 28%),
+    inset 0.15rem 0.2rem 0.35rem rgb(40 19 19 / 30%);
   --motion-fast: 160ms;
   --motion-ease: cubic-bezier(0.2, 0.7, 0.3, 1);
 }
@@ -160,7 +169,7 @@ svg {
 }
 ::selection {
   background: var(--color-accent);
-  color: #fff;
+  color: var(--color-on-accent);
 }
 
 :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
@@ -244,8 +253,8 @@ svg {
 
 .button-primary {
   background: var(--color-accent);
-  border-color: #652735;
-  color: #fff;
+  border-color: var(--color-accent);
+  color: var(--color-on-accent);
   box-shadow: var(--shadow-control);
 }
 
@@ -260,9 +269,9 @@ svg {
   box-shadow: var(--shadow-pressed);
 }
 .button:disabled {
-  background: #e0d5cc;
-  border-color: #a09188;
-  color: #65584f;
+  background: var(--color-raised);
+  border-color: var(--color-line);
+  color: var(--color-muted);
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -323,13 +332,13 @@ svg {
   place-items: center;
   inline-size: 2.875rem;
   block-size: 2.875rem;
-  border: 1px solid #dba78f;
+  border: 1px solid #936855;
   border-radius: 0.95rem;
   background: var(--color-surface);
   box-shadow:
-    0.15rem 0.2rem 0.35rem rgb(94 56 44 / 14%),
-    inset 0.15rem 0.15rem 0.3rem #ffe5d5,
-    inset -0.15rem -0.15rem 0.3rem #dca18a;
+    0.15rem 0.2rem 0.35rem rgb(0 0 0 / 38%),
+    inset 0.15rem 0.15rem 0.3rem var(--color-peach-highlight),
+    inset -0.15rem -0.15rem 0.3rem var(--color-peach-shade);
   color: var(--color-accent);
   font-family: var(--font-display);
   font-size: 2rem;
@@ -451,12 +460,12 @@ svg {
 }
 .material-tile-back {
   inset: 11% auto auto 18%;
-  background: #cbb5bd;
+  background: #493540;
   transform: rotate(12deg);
   box-shadow:
-    0.7rem 1.15rem 1.5rem rgb(93 52 57 / 16%),
-    inset 0.35rem 0.4rem 0.7rem #e6d3d8,
-    inset -0.4rem -0.45rem 0.8rem #ab8b98;
+    0.7rem 1.15rem 1.5rem rgb(0 0 0 / 38%),
+    inset 0.35rem 0.4rem 0.7rem #715360,
+    inset -0.4rem -0.45rem 0.8rem #2c2029;
 }
 .material-tile-front {
   display: flex;
@@ -467,9 +476,9 @@ svg {
   transform: rotate(-9deg);
   background: var(--color-surface);
   box-shadow:
-    0.8rem 1.2rem 1.5rem rgb(94 56 44 / 20%),
-    inset 0.4rem 0.5rem 0.7rem #ffe2cc,
-    inset -0.5rem -0.55rem 0.9rem #d49b84;
+    0.8rem 1.2rem 1.5rem rgb(0 0 0 / 38%),
+    inset 0.4rem 0.5rem 0.7rem var(--color-peach-highlight),
+    inset -0.5rem -0.55rem 0.9rem var(--color-peach-shade);
 }
 .material-monogram {
   color: var(--color-accent);
@@ -480,8 +489,8 @@ svg {
   letter-spacing: -0.09em;
   padding-inline-end: 0.09em;
   text-shadow:
-    2px 3px 0 #622735,
-    -2px -2px 0 #a85b67;
+    2px 3px 0 #7d473e,
+    -2px -2px 0 #ffd1b8;
 }
 .material-wordmark {
   margin-block-start: 0.7rem;
@@ -496,19 +505,19 @@ svg {
   inline-size: 6rem;
   aspect-ratio: 1;
   padding: 1rem;
-  border: 1px solid #687c5e;
+  border: 1px solid #7a9071;
   border-radius: 50%;
   background: var(--color-sage);
-  color: #34432d;
+  color: #e1edd9;
   font-size: 0.875rem;
   font-weight: 700;
   line-height: 1.3;
   text-align: center;
   transform: rotate(10deg);
   box-shadow:
-    0.25rem 0.4rem 0.6rem rgb(60 74 50 / 18%),
-    inset 0.2rem 0.2rem 0.35rem #e4ecd9,
-    inset -0.2rem -0.2rem 0.35rem #a0b28f;
+    0.25rem 0.4rem 0.6rem rgb(0 0 0 / 38%),
+    inset 0.2rem 0.2rem 0.35rem var(--color-sage-highlight),
+    inset -0.2rem -0.2rem 0.35rem var(--color-sage-shade);
 }
 .material-annotation {
   position: absolute;
@@ -524,7 +533,7 @@ svg {
   display: block;
   block-size: 1.75rem;
   margin: 0.5rem 0 0 1rem;
-  border-inline-start: 1px solid #9e8275;
+  border-inline-start: 1px solid var(--color-control-border);
 }
 .material-annotation-depth {
   inset: auto auto 0 16%;
@@ -573,7 +582,7 @@ svg {
 }
 
 .explore {
-  background: #ede3d9;
+  background: var(--color-surface-soft);
 }
 .explore-heading {
   display: grid;
@@ -586,24 +595,24 @@ svg {
   max-inline-size: 43ch;
 }
 .explorer {
-  --sample-surface: #efc0aa;
-  --sample-highlight: #ffe3cf;
-  --sample-shade: #c78e78;
-  --sample-shadow-rgb: 106 61 46;
+  --sample-surface: var(--color-surface);
+  --sample-highlight: var(--color-peach-highlight);
+  --sample-shade: var(--color-peach-shade);
+  --sample-shadow-rgb: 0 0 0;
   --clay-depth: 3;
   --clay-radius: 28px;
 }
 .explorer[data-palette='sage'] {
-  --sample-surface: #c7d5bb;
-  --sample-highlight: #e7efdc;
-  --sample-shade: #98ab8a;
-  --sample-shadow-rgb: 59 78 48;
+  --sample-surface: var(--color-sage);
+  --sample-highlight: var(--color-sage-highlight);
+  --sample-shade: var(--color-sage-shade);
+  --sample-shadow-rgb: 0 0 0;
 }
 .explorer[data-palette='lilac'] {
-  --sample-surface: #d6c8e5;
-  --sample-highlight: #f1e7fb;
-  --sample-shade: #ad98c0;
-  --sample-shadow-rgb: 79 52 99;
+  --sample-surface: var(--color-lilac);
+  --sample-highlight: var(--color-lilac-highlight);
+  --sample-shade: var(--color-lilac-shade);
+  --sample-shadow-rgb: 0 0 0;
 }
 .comparison-grid {
   display: grid;
@@ -638,7 +647,7 @@ svg {
   place-items: center;
   padding: clamp(1.5rem, 3.7vw, 3rem);
   min-block-size: 25rem;
-  background: #e3d7cc;
+  background: var(--color-stage);
   border-radius: var(--radius-md);
 }
 .sample-card {
@@ -648,15 +657,15 @@ svg {
   background: var(--sample-surface);
 }
 .sample-card-flat {
-  border: 1px solid #977b6d;
+  border: 1px solid var(--color-control-border);
   border-radius: 0.3rem;
 }
 .sample-card-clay {
-  border: 1px solid rgb(85 52 45 / 18%);
+  border: 1px solid rgb(255 224 208 / 16%);
   border-radius: var(--clay-radius);
   box-shadow:
     calc(var(--clay-depth) * 3px) calc(var(--clay-depth) * 4px)
-      calc(var(--clay-depth) * 7px) rgb(var(--sample-shadow-rgb) / 23%),
+      calc(var(--clay-depth) * 7px) rgb(var(--sample-shadow-rgb) / 42%),
     inset calc(var(--clay-depth) * 1.5px) calc(var(--clay-depth) * 1.5px)
       calc(var(--clay-depth) * 3px) var(--sample-highlight),
     inset calc(var(--clay-depth) * -1.5px) calc(var(--clay-depth) * -2px)
@@ -668,9 +677,9 @@ svg {
   inline-size: 3.5rem;
   block-size: 3.5rem;
   margin-block-end: 1.75rem;
-  border: 1px solid #6b2837;
+  border: 1px solid var(--color-accent);
   background: var(--color-accent);
-  color: #fff;
+  color: var(--color-on-accent);
   font-size: 2rem;
   font-weight: 700;
   line-height: 1;
@@ -699,9 +708,9 @@ svg {
   gap: 0.75rem;
   margin-block-start: 1.75rem;
   padding: 0.8rem 1rem;
-  border: 1px solid #652735;
+  border: 1px solid var(--color-accent);
   background: var(--color-accent);
-  color: #fff;
+  color: var(--color-on-accent);
   font-size: 0.8125rem;
   font-weight: 700;
 }
@@ -721,7 +730,7 @@ svg {
   gap: 1.75rem;
   margin-block-start: 2rem;
   padding-block: 1.5rem;
-  border-block-start: 1px solid #c5b5a6;
+  border-block-start: 1px solid var(--color-line);
 }
 .explorer-controls > legend {
   padding-inline-end: 1rem;
@@ -771,7 +780,7 @@ svg {
 .palette-swatch {
   inline-size: 0.85rem;
   block-size: 0.85rem;
-  border: 1px solid #8d766c;
+  border: 1px solid var(--color-control-border);
   border-radius: 50%;
 }
 .palette-swatch-peach {
@@ -834,7 +843,7 @@ svg {
   justify-items: start;
   min-block-size: 26rem;
   padding: clamp(1.5rem, 4vw, 3rem);
-  border: 1px solid rgb(65 45 36 / 17%);
+  border: 1px solid rgb(255 224 208 / 16%);
   border-radius: var(--radius-lg);
 }
 .concept-wordmark {
@@ -859,8 +868,8 @@ svg {
   font-weight: 700;
 }
 .concept-preview-wellness {
-  background: #e2e7d8;
-  color: #30412e;
+  background: #252f29;
+  color: #e1edd9;
 }
 .concept-breath {
   display: grid;
@@ -871,30 +880,30 @@ svg {
   margin-block-start: 0.75rem;
   margin-inline-end: 1rem;
   border-radius: 50%;
-  background: #b6c9a4;
+  background: var(--color-sage);
   box-shadow:
-    0.6rem 0.7rem 1rem rgb(63 83 47 / 20%),
-    inset 0.45rem 0.45rem 0.7rem #e1eccf,
-    inset -0.4rem -0.4rem 0.7rem #8ca178;
+    0.6rem 0.7rem 1rem rgb(0 0 0 / 38%),
+    inset 0.45rem 0.45rem 0.7rem var(--color-sage-highlight),
+    inset -0.4rem -0.4rem 0.7rem var(--color-sage-shade);
 }
 .concept-breath span {
   inline-size: 53%;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: #d7e2c7;
+  background: #465b44;
   box-shadow:
-    inset 0.2rem 0.2rem 0.45rem #8eaa77,
-    inset -0.2rem -0.2rem 0.4rem #f2f5e8;
+    inset 0.2rem 0.2rem 0.45rem var(--color-sage-shade),
+    inset -0.2rem -0.2rem 0.4rem var(--color-sage-highlight);
 }
 .concept-preview-wellness .concept-action {
-  background: #c7d5bb;
+  background: var(--color-sage);
   box-shadow:
-    0.2rem 0.2rem 0.4rem #b7c0a8,
-    inset 0.15rem 0.15rem 0.25rem #e9efdf;
+    0.2rem 0.2rem 0.4rem #17221b,
+    inset 0.15rem 0.15rem 0.25rem var(--color-sage-highlight);
 }
 .concept-preview-learning {
-  background: #ece3f0;
-  color: #46304f;
+  background: #2e2636;
+  color: #eee2f5;
 }
 .concept-blocks {
   display: flex;
@@ -909,36 +918,36 @@ svg {
   inline-size: clamp(3.25rem, 7vw, 4.5rem);
   aspect-ratio: 1;
   border-radius: 25%;
-  background: #cfb9de;
+  background: var(--color-lilac);
   font-size: 2rem;
   font-weight: 700;
   box-shadow:
-    0.3rem 0.5rem 0.7rem rgb(86 58 104 / 19%),
-    inset 0.2rem 0.25rem 0.35rem #f1e3fb,
-    inset -0.25rem -0.3rem 0.4rem #ad90be;
+    0.3rem 0.5rem 0.7rem rgb(0 0 0 / 38%),
+    inset 0.2rem 0.25rem 0.35rem var(--color-lilac-highlight),
+    inset -0.25rem -0.3rem 0.4rem var(--color-lilac-shade);
   transform: rotate(-10deg);
 }
 .concept-blocks span:nth-child(2) {
-  background: #f1c8a0;
-  color: #53331d;
+  background: var(--color-surface);
+  color: var(--color-ink);
   box-shadow:
-    0.3rem 0.5rem 0.7rem rgb(108 65 35 / 19%),
-    inset 0.2rem 0.25rem 0.35rem #ffe5c4,
-    inset -0.25rem -0.3rem 0.4rem #cea073;
+    0.3rem 0.5rem 0.7rem rgb(0 0 0 / 38%),
+    inset 0.2rem 0.25rem 0.35rem var(--color-peach-highlight),
+    inset -0.25rem -0.3rem 0.4rem var(--color-peach-shade);
   transform: translateY(-0.8rem) rotate(5deg);
 }
 .concept-blocks span:nth-child(3) {
   transform: rotate(12deg);
 }
 .concept-preview-learning .concept-action {
-  background: #dac8e5;
+  background: var(--color-lilac);
   box-shadow:
-    0.2rem 0.2rem 0.4rem #c7b5d1,
-    inset 0.15rem 0.15rem 0.25rem #f8e9ff;
+    0.2rem 0.2rem 0.4rem #1c1624,
+    inset 0.15rem 0.15rem 0.25rem var(--color-lilac-highlight);
 }
 .concept-preview-studio {
-  background: #ecdbcb;
-  color: #583727;
+  background: #332723;
+  color: #f5e3d5;
 }
 .concept-vessel {
   position: relative;
@@ -947,26 +956,26 @@ svg {
   block-size: 8rem;
   margin: 1.5rem 2rem 0 0;
   border-radius: 24% 24% 42% 42%;
-  background: #c78e72;
+  background: #80523e;
   box-shadow:
-    0.6rem 0.7rem 1rem rgb(96 54 32 / 22%),
-    inset 0.6rem 0 0.8rem #e8b99c,
-    inset -0.65rem -0.2rem 0.8rem #a16b54;
+    0.6rem 0.7rem 1rem rgb(0 0 0 / 38%),
+    inset 0.6rem 0 0.8rem #b07a59,
+    inset -0.65rem -0.2rem 0.8rem #4c3028;
 }
 .concept-vessel-rim {
   position: absolute;
   inset: -0.5rem 0 auto;
   block-size: 1.5rem;
-  border: 0.3rem solid #dca88b;
+  border: 0.3rem solid #a06e52;
   border-radius: 50%;
-  background: #80513d;
-  box-shadow: inset 0.25rem 0.25rem 0.35rem #543120;
+  background: #39241e;
+  box-shadow: inset 0.25rem 0.25rem 0.35rem #1f1613;
 }
 .concept-preview-studio .concept-action {
-  background: #e1b79b;
+  background: var(--color-surface);
   box-shadow:
-    0.2rem 0.2rem 0.4rem #ccb097,
-    inset 0.15rem 0.15rem 0.25rem #ffe1c6;
+    0.2rem 0.2rem 0.4rem #201715,
+    inset 0.15rem 0.15rem 0.25rem var(--color-peach-highlight);
 }
 .concept-category {
   margin-block-end: 1rem;
@@ -987,7 +996,7 @@ svg {
 
 .approach {
   border-block: 1px solid var(--color-line);
-  background: #f1e7dc;
+  background: var(--color-stage);
 }
 .approach-list {
   display: grid;
@@ -1045,13 +1054,13 @@ svg {
 }
 .project-form {
   padding: clamp(1.25rem, 3.5vw, 2.75rem);
-  border: 1px solid #d0b3a0;
+  border: 1px solid var(--color-line);
   border-radius: var(--radius-lg);
-  background: #fff6ec;
+  background: var(--color-paper);
   box-shadow:
-    0.6rem 0.8rem 1.4rem rgb(94 56 44 / 10%),
-    inset 0.2rem 0.2rem 0.35rem #fff,
-    inset -0.2rem -0.2rem 0.45rem #eddac7;
+    0.6rem 0.8rem 1.4rem rgb(0 0 0 / 38%),
+    inset 0.2rem 0.2rem 0.35rem rgb(255 224 208 / 7%),
+    inset -0.2rem -0.2rem 0.45rem #191519;
 }
 .project-form > h3 {
   margin-block-end: 0.75rem;
@@ -1088,7 +1097,7 @@ svg {
   border-radius: 0.65rem;
   background: var(--color-paper);
   color: var(--color-ink);
-  box-shadow: inset 0.1rem 0.15rem 0.25rem rgb(89 60 42 / 5%);
+  box-shadow: inset 0.1rem 0.15rem 0.25rem rgb(0 0 0 / 22%);
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -1099,7 +1108,7 @@ textarea {
   resize: vertical;
 }
 ::placeholder {
-  color: #77665c;
+  color: var(--color-muted);
   opacity: 1;
 }
 .form-field [aria-invalid='true'] {
@@ -1115,7 +1124,7 @@ textarea {
   border-block-start: 1px solid var(--color-line);
 }
 .brief-result textarea {
-  background: #f0ebe1;
+  background: var(--color-stage);
 }
 .brief-result .button {
   margin-block-start: 1rem;
@@ -1224,7 +1233,7 @@ textarea {
   }
   .navigation-cta {
     padding-inline: 1rem;
-    border: 1px solid #c99ca6;
+    border: 1px solid #a77970;
     border-radius: 0.8rem;
     background: var(--color-accent-soft);
   }
@@ -1330,7 +1339,7 @@ textarea {
     background: var(--color-accent-hover);
   }
   .button-secondary:not(:disabled):hover {
-    background: #f1e3d8;
+    background: var(--color-raised);
   }
   .text-link:hover {
     text-decoration-thickness: 2px;
@@ -1362,9 +1371,9 @@ textarea {
 
 @media (prefers-contrast: more) {
   :root {
-    --color-muted: #463a35;
-    --color-line: #8d766c;
-    --color-control-border: #463a35;
+    --color-muted: #ede0d8;
+    --color-line: #b6a0a6;
+    --color-control-border: #d6c1c7;
   }
   .material-tile,
   .sample-card-clay,
@@ -1407,8 +1416,12 @@ textarea {
 
 @media print {
   :root {
+    color-scheme: light;
     --color-canvas: #fff;
+    --color-ink: #222;
     --color-muted: #333;
+    --color-accent: #813747;
+    --color-line: #aaa;
     --section-space: 2rem;
   }
   body {
@@ -1427,6 +1440,9 @@ textarea {
   *,
   *::before,
   *::after {
+    background: transparent !important;
+    color: #222 !important;
+    border-color: #777 !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
