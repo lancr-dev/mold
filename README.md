@@ -1,5 +1,9 @@
 # Mold — Claymorphism
 
+![HTML5](https://img.shields.io/badge/HTML5-%23fe4b01?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-%232196f2?style=for-the-badge&logo=css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge&logo=javascript&logoColor=white)
+
 A responsive web design showcase by Lance Ducante, built with plain HTML, CSS, and JavaScript. It explores claymorphism through rounded shapes, soft shadows, and interactive material samples.
 
 ## Features
