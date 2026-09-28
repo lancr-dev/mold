@@ -13,7 +13,6 @@
     lilac: 'Lilac',
   });
 
-  // Mobile navigation
   function initNavigation() {
     const header = document.querySelector('[data-header]');
     const toggle = document.querySelector('[data-menu-toggle]');
@@ -78,7 +77,6 @@
         section.focus({ preventScroll: true });
       }
 
-      // Preserve native anchor scrolling and URL history.
     });
 
     document.addEventListener('keydown', (event) => {
@@ -106,7 +104,6 @@
     syncViewport();
   }
 
-  // Highlight the current navigation section
   function initSectionHighlighting() {
     const navigation = document.querySelector('[data-navigation]');
     const header = document.querySelector('[data-header]');
@@ -175,7 +172,6 @@
     update();
   }
 
-  // Keep material values within the supported range
   function clampStep(value, min, max, step, fallback) {
     const number = Number(value);
 
@@ -186,7 +182,6 @@
     return min + Math.round((bounded - min) / step) * step;
   }
 
-  // Interactive material explorer
   function initMaterialExplorer() {
     const explorer = document.querySelector('[data-explorer]');
 
@@ -292,7 +287,6 @@
     return () => ({ ...material });
   }
 
-  // Prepare a local project brief without sending or storing it
   function initProjectBrief(getMaterial) {
     const group = document.getElementById('project-form');
 
@@ -381,7 +375,6 @@
       .querySelector('[data-explorer]')
       ?.addEventListener('materialchange', refreshBrief);
 
-    // Carry a selected concept into the project outline.
     for (const link of document.querySelectorAll('[data-project-interest]')) {
       link.addEventListener('click', (event) => {
         if (
@@ -461,7 +454,6 @@
     }
   }
 
-  // Initialize after the HTML is available.
   function init() {
     initNavigation();
     initSectionHighlighting();
