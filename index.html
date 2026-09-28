@@ -10,7 +10,7 @@
     <meta name="theme-color" content="#191619" />
     <meta name="color-scheme" content="dark" />
     <title>Mold — Claymorphism | Lance Ducante</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
@@ -29,12 +29,12 @@
           class="menu-toggle"
           type="button"
           aria-expanded="false"
+          aria-label="Open navigation"
           aria-controls="primary-navigation"
           data-menu-toggle
           hidden
         >
-          <span>Menu</span
-          ><span class="menu-toggle-icon" aria-hidden="true"></span>
+          <span class="menu-toggle-icon" aria-hidden="true"></span>
         </button>
         <nav
           class="primary-navigation"
@@ -56,6 +56,7 @@
             </li>
           </ul>
         </nav>
+        <div class="navigation-backdrop" data-menu-backdrop aria-hidden="true"></div>
       </div>
     </header>
 

@@ -17,6 +17,7 @@
     const header = document.querySelector('[data-header]');
     const toggle = document.querySelector('[data-menu-toggle]');
     const navigation = document.querySelector('[data-navigation]');
+    const backdrop = document.querySelector('[data-menu-backdrop]');
 
     if (!header || !toggle || !navigation) return;
 
@@ -24,8 +25,19 @@
 
     const isOpen = () => toggle.getAttribute('aria-expanded') === 'true';
 
+    function setMenuOpen(open) {
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute(
+        'aria-label',
+        open ? 'Close navigation' : 'Open navigation',
+      );
+      header.dataset.menuOpen = String(open);
+      document.documentElement.dataset.menuOpen = String(open);
+      navigation.inert = !desktop.matches && !open;
+    }
+
     function closeMenu(restoreFocus = false) {
-      toggle.setAttribute('aria-expanded', 'false');
+      setMenuOpen(false);
 
       if (restoreFocus && !desktop.matches) {
         toggle.focus({ preventScroll: true });
@@ -46,9 +58,11 @@
 
     toggle.addEventListener('click', () => {
       if (!desktop.matches) {
-        toggle.setAttribute('aria-expanded', String(!isOpen()));
+        setMenuOpen(!isOpen());
       }
     });
+
+    backdrop?.addEventListener('click', () => closeMenu(true));
 
     navigation.addEventListener('click', (event) => {
       const link = event.target.closest("a[href^='#']");
@@ -102,6 +116,16 @@
 
     header.dataset.menuReady = 'true';
     syncViewport();
+
+    function updateHeaderHeight() {
+      document.documentElement.style.setProperty(
+        '--header-height',
+        `${header.getBoundingClientRect().height}px`,
+      );
+    }
+
+    updateHeaderHeight();
+    new ResizeObserver(updateHeaderHeight).observe(header);
   }
 
   function initSectionHighlighting() {
@@ -119,8 +143,6 @@
 
     if (!items.length) return;
 
-    const desktop = window.matchMedia('(min-width: 64rem)');
-
     let framePending = false;
     let currentLink = null;
 
@@ -128,7 +150,7 @@
       framePending = false;
 
       const headerHeight =
-        desktop.matches && header ? header.getBoundingClientRect().height : 0;
+        header ? header.getBoundingClientRect().height : 0;
 
       const readingLine =
         headerHeight + Math.min(window.innerHeight * 0.2, 160);
